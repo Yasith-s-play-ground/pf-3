@@ -8,23 +8,34 @@ void main() {
     }
 
 
-//    System.out.println("\n\nSecond method");
-//
-//    int maxNoOfColumns = 1;
-//    int currentColumn = 0;
-//    int currentRow = 0;
-//    while (currentColumn++ < maxNoOfColumns) {
+    System.out.println("\n\nSecond method");
+
+    int noOfColumns = 1;
+    int currentColumn = 0;
+    int currentRow = 0;
+    int noOfRows=7;
+//    while (currentColumn++ < noOfColumns) {
 //        currentRow++;
 //        //System.out.println(" Current row is " + currentRow);
-//        System.out.print(currentColumn < maxNoOfColumns ? "* " : "\n");
-//        if (currentRow < 5 && currentColumn == maxNoOfColumns) {
-//            maxNoOfColumns++;
+//        System.out.print(currentColumn < noOfColumns ? "* " : "\n");
+//        if (currentRow < 5 && currentColumn == noOfColumns) {
+//            noOfColumns++;
 //            // System.out.println("next max no of columns is " + maxNoOfColumns);
 //            currentColumn = 0;
-//        } else if (currentRow >= 5  && currentColumn == maxNoOfColumns) {
-//            maxNoOfColumns--;
-//           // System.out.println("next max no of columns is " + maxNoOfColumns);
+//        } else if (currentRow >= 5 && currentColumn == noOfColumns) {
+//            noOfColumns--;
+//            // System.out.println("next max no of columns is " + maxNoOfColumns);
 //            currentColumn = 0;
 //        }
+//
 //    }
+
+    while(currentRow++<noOfRows){
+        if (currentRow<4)noOfColumns++;
+        else noOfColumns--;
+
+        System.out.print(currentColumn < noOfColumns ? "* " : "\n");
+        if (currentColumn==noOfColumns)currentColumn=0;
+        currentColumn++;
+    }
 }
